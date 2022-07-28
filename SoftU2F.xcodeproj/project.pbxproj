@@ -716,14 +716,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = GitHub;
 				TargetAttributes = {
 					51F0900B1E37E8C600F03AD3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VEKTX9H2N7;
+						DevelopmentTeam = 327LJ5UTTC;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -732,15 +732,14 @@
 					};
 					51F0901C1E37E8C600F03AD3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VEKTX9H2N7;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 51F0900B1E37E8C600F03AD3;
 					};
 					F725EBC31F1FAD3C000A003C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = VEKTX9H2N7;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 327LJ5UTTC;
+						ProvisioningStyle = Automatic;
 					};
 					F725EBE11F1FB09D000A003C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -749,20 +748,24 @@
 					};
 					F738F4F01E4A2CCB005680A2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 327LJ5UTTC;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					F738F52E1E4A2E8A005680A2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 327LJ5UTTC;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					F738F5591E4A31DE005680A2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 327LJ5UTTC;
 						ProvisioningStyle = Automatic;
 					};
 					F738F5701E4A3328005680A2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 327LJ5UTTC;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
@@ -773,6 +776,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1021,7 +1025,8 @@
 		51F090241E37E8C600F03AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1042,6 +1047,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1066,9 +1072,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/include/**";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/**";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1078,7 +1087,8 @@
 		51F090251E37E8C600F03AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1099,6 +1109,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1117,8 +1128,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/include/**";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/**";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
@@ -1131,21 +1146,27 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SoftU2FTool/SoftU2FTool.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc/**";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/inc/**",
+					"$(PROJECT_DIR)/openssl-1.0.2u/include/**",
+				);
 				INFOPLIST_FILE = SoftU2FTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FToolApp;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/**";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SoftU2FToolApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SoftU2FTool;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SoftU2FTool/SoftU2F-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1156,20 +1177,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SoftU2FTool/SoftU2FTool.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc/**";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/inc/**",
+					"$(PROJECT_DIR)/openssl-1.0.2u/include/**",
+				);
 				INFOPLIST_FILE = SoftU2FTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FToolApp;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/**";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SoftU2FToolApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SoftU2FTool;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SoftU2FTool/SoftU2F-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -1179,13 +1206,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc";
 				INFOPLIST_FILE = SoftU2FToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/libu2f-host/1.1.5/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FToolTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1203,13 +1231,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc";
 				INFOPLIST_FILE = SoftU2FToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/libu2f-host/1.1.5/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FToolTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1223,20 +1252,26 @@
 		F725EBCC1F1FAD3C000A003C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_DIVIDE_BY_ZERO = NO;
+				CLANG_ANALYZER_NULL_DEREFERENCE = NO;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
+				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc";
 				INFOPLIST_FILE = SoftU2FDriver/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MODULE_NAME = com.github.SoftU2FDriver;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SoftU2FDriver;
 				PRODUCT_NAME = softu2f;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx10.12;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -1245,19 +1280,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
-				DEVELOPMENT_TEAM = VEKTX9H2N7;
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
+				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/inc";
 				INFOPLIST_FILE = SoftU2FDriver/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MODULE_NAME = com.github.SoftU2FDriver;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SoftU2FDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SoftU2FDriver;
 				PRODUCT_NAME = softu2f;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx10.12;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;
@@ -1289,11 +1326,12 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1301,8 +1339,8 @@
 				INFOPLIST_FILE = APDU/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.APDU;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.APDU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1319,11 +1357,12 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1331,8 +1370,8 @@
 				INFOPLIST_FILE = APDU/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.APDU;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.APDU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1349,7 +1388,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				INFOPLIST_FILE = APDUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.APDUTests;
@@ -1366,7 +1405,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				INFOPLIST_FILE = APDUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.APDUTests;
@@ -1382,16 +1421,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = /usr/local/opt/openssl/include;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/include/**";
 				INFOPLIST_FILE = SelfSignedCertificate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -1399,9 +1439,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				OTHER_LDFLAGS = /usr/local/opt/openssl/lib/libcrypto.a;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SelfSignedCertificate;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				OTHER_LDFLAGS = "$(PROJECT_DIR)/openssl-1.0.2u/libcrypto.a";
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SelfSignedCertificate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1415,16 +1455,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = /usr/local/opt/openssl/include;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openssl-1.0.2u/include/**";
 				INFOPLIST_FILE = SelfSignedCertificate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -1432,9 +1473,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				OTHER_LDFLAGS = /usr/local/opt/openssl/lib/libcrypto.a;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.SelfSignedCertificate;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				OTHER_LDFLAGS = "$(PROJECT_DIR)/openssl-1.0.2u/libcrypto.a";
+				PRODUCT_BUNDLE_IDENTIFIER = me.malash.com.github.SelfSignedCertificate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1449,7 +1490,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				INFOPLIST_FILE = SelfSignedCertificateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SelfSignedCertificateTests;
@@ -1466,7 +1507,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 327LJ5UTTC;
 				INFOPLIST_FILE = SelfSignedCertificateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SelfSignedCertificateTests;

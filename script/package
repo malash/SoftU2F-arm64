@@ -10,6 +10,8 @@ xcodebuild -scheme SoftU2F install DSTROOT=$BUILD_DIR/bundles
 
 cd $BUILD_DIR
 
+mv ./bundles/System/Library ./bundles/Library
+
 # The installer would fail if we included these because /System and /usr cannot
 # be written to. Not sure how to prevent them from being created in the first
 # place.

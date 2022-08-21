@@ -19,4 +19,4 @@ rm -rf ./bundles/System
 rm -rf ./bundles/usr
 
 pkgbuild --analyze --root ./bundles/ SoftU2F.plist
-pkgbuild --identifier me.malash.com.GitHub.SoftU2F --root ./bundles/ --scripts ../install-scripts --component-plist ./SoftU2F.plist ./SoftU2F.pkg
+pkgbuild --identifier com.GitHub.SoftU2F --root ./bundles/ --scripts ../install-scripts --component-plist ./SoftU2F.plist ./SoftU2F.pkg

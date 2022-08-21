@@ -30,3 +30,5 @@ if [ ! -d $SDK_PATH ]; then
     echo "Symlinking SDK into Xcode"
     sudo ln -s $LOCAL_SDK_PATH $SDK_PATH
 fi
+
+source $REPO_DIR/script/openssl

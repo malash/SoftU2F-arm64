@@ -51,3 +51,5 @@ if [ ! -d $OPENSSL_PATH ]; then
       "$OPENSSL_PATH/arm64/build/lib/libssl.a" \
       -create -output $OPENSSL_PATH/build/lib/libssl.a
 fi
+
+set +e

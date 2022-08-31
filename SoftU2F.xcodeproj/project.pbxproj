@@ -1150,7 +1150,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 327LJ5UTTC;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/inc/**",
 					"$(PROJECT_DIR)/build/openssl/build/include/**",
@@ -1180,7 +1180,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 327LJ5UTTC;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/inc/**",
 					"$(PROJECT_DIR)/build/openssl/build/include/**",

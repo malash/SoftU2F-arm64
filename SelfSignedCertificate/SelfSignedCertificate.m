@@ -110,7 +110,7 @@ const int cert_len = 386;
 }
 
 + (NSData *)signData:(NSData *)msg {
-  EVP_MD_CTX ctx;
+  EVP_MD_CTX* ctx = EVP_MD_CTX_new();
   const unsigned char *cmsg = (const unsigned char *)[msg bytes];
   unsigned char *sig;
   unsigned int len;
@@ -146,13 +146,13 @@ const int cert_len = 386;
 
   // `ec` memory is managed by `pkey` from here.
 
-  if (EVP_SignInit(&ctx, EVP_sha256()) != 1) {
+  if (EVP_SignInit(ctx, EVP_sha256()) != 1) {
     printf("failed to init signing context\n");
     EVP_PKEY_free(pkey);
     return nil;
   };
 
-  if (EVP_SignUpdate(&ctx, cmsg, (unsigned int)[msg length]) != 1) {
+  if (EVP_SignUpdate(ctx, cmsg, (unsigned int)[msg length]) != 1) {
     printf("failed to update digest\n");
     EVP_PKEY_free(pkey);
     return nil;
@@ -165,7 +165,7 @@ const int cert_len = 386;
     return nil;
   }
 
-  if (EVP_SignFinal(&ctx, sig, &len, pkey) != 1) {
+  if (EVP_SignFinal(ctx, sig, &len, pkey) != 1) {
     printf("failed to finalize digest\n");
     free(sig);
     EVP_PKEY_free(pkey);

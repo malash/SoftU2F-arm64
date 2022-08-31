@@ -5,20 +5,18 @@ set -e
 REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )"
 BUILD_DIR=$REPO_DIR/build
 OPENSSL_PATH=$BUILD_DIR/openssl
-OPENSSL_VERSION=openssl-1.0.2u
+OPENSSL_URL=https://www.openssl.org/source/old/1.1.1/openssl-1.1.1p.tar.gz
 
 if [ ! -d $OPENSSL_PATH ]; then
     mkdir -p $OPENSSL_PATH
 
     echo "Downloading OpenSSL"
     OPENSSL_ARCHIVE_PATH=$OPENSSL_PATH/openssl.tar.xz
-    curl -L -s -o $OPENSSL_ARCHIVE_PATH https://ftp.openssl.org/source/old/1.0.2/openssl-1.0.2u.tar.gz
+    curl -L -s -o $OPENSSL_ARCHIVE_PATH $OPENSSL_URL
 
     echo "Extracting OpenSSL"
     mkdir -p $OPENSSL_PATH/arm64
     tar -C $OPENSSL_PATH/arm64 -xf $OPENSSL_ARCHIVE_PATH
-    # apply patch to fix compilation on arm64
-    patch -d $OPENSSL_PATH/arm64/$OPENSSL_VERSION < $REPO_DIR/script/openssl-1.0.2u-darwin-arm64.patch
 
     mkdir -p $OPENSSL_PATH/x86_64
     tar -C $OPENSSL_PATH/x86_64 -xf $OPENSSL_ARCHIVE_PATH
@@ -26,13 +24,13 @@ if [ ! -d $OPENSSL_PATH ]; then
     rm $OPENSSL_ARCHIVE_PATH
 
     echo "Building OpenSSL(arm64)"
-    (cd $OPENSSL_PATH/arm64/$OPENSSL_VERSION && \
+    (cd $OPENSSL_PATH/arm64/openssl-* && \
       ./Configure darwin64-arm64-cc shared --prefix=$OPENSSL_PATH/arm64/build --openssldir=$OPENSSL_PATH/arm64/build && \
       make -j$(nproc) > /dev/null && \
       make install_sw)
 
     echo "Building OpenSSL(x86_64)"
-    (cd $OPENSSL_PATH/x86_64/$OPENSSL_VERSION && \
+    (cd $OPENSSL_PATH/x86_64/openssl-* && \
       ./Configure darwin64-x86_64-cc shared --prefix=$OPENSSL_PATH/x86_64/build --openssldir=$OPENSSL_PATH/x86_64/build && \
       make -j$(nproc) > /dev/null && \
       make install_sw)

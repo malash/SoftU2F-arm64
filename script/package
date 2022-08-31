@@ -18,5 +18,9 @@ mv ./bundles/System/Library ./bundles/Library
 rm -rf ./bundles/System
 rm -rf ./bundles/usr
 
+codesign --remove-signature ./bundles/Applications/SoftU2F.app
+codesign --remove-signature ./bundles/Library/Extensions/softu2f.kext
+
+
 pkgbuild --analyze --root ./bundles/ SoftU2F.plist
 pkgbuild --identifier com.GitHub.SoftU2F --root ./bundles/ --scripts ../install-scripts --component-plist ./SoftU2F.plist ./SoftU2F.pkg

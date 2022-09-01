@@ -38,7 +38,6 @@ class U2FRegistration {
 
         let legacyCounterSize = MemoryLayout<UInt32>.size
         let appTagSize = Int(U2F_APPID_SIZE)
-        var maxCtr = Counter.current ?? 0
 
         for kp in KeyPair.all(label: namespace) {
             guard let appTag = kp.applicationTag else { continue }
@@ -47,26 +46,12 @@ class U2FRegistration {
             case appTagSize:
                 continue
             case legacyCounterSize + appTagSize:
-                // Find the maximum legacy counter.
-                let ctr = appTag.withUnsafeBytes { (ptr:UnsafePointer<UInt32>) -> UInt32 in
-                    return ptr.pointee.bigEndian
-                }
-                if ctr > maxCtr {
-                    maxCtr = ctr
-                }
-
                 // remove legacy counter from the application tag.
                 kp.applicationTag = appTag.subdata(in: legacyCounterSize..<(legacyCounterSize + appTagSize))
             default:
                 print("bad applicationTag size")
                 continue
             }
-        }
-
-        // Use the highest per-registration counter value plus one as our global
-        // counter value.
-        if maxCtr > 0 {
-            Counter.current = maxCtr + 1
         }
     }
 

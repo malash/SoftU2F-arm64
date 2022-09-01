@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2BF30328BF85960054695D /* ssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F2BF30228BF85960054695D /* ssl.c */; };
 		0F42E68428BFB64800658085 /* KeychainLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F42E68328BFB64800658085 /* KeychainLocal.swift */; };
 		5119862E1E3C1519006A3BBB /* KnownFacets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5119862D1E3C1519006A3BBB /* KnownFacets.swift */; };
 		51203C391E39234000F661DF /* U2FHIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51203C381E39234000F661DF /* U2FHIDTests.swift */; };
@@ -172,8 +171,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F2BF30128BF85960054695D /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
-		0F2BF30228BF85960054695D /* ssl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssl.c; sourceTree = "<group>"; };
 		0F42E68328BFB64800658085 /* KeychainLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainLocal.swift; sourceTree = "<group>"; };
 		5119862D1E3C1519006A3BBB /* KnownFacets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnownFacets.swift; sourceTree = "<group>"; };
 		51203C381E39234000F661DF /* U2FHIDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = U2FHIDTests.swift; sourceTree = "<group>"; };
@@ -390,8 +387,6 @@
 				F7713A5E1F477BA90036A0D5 /* Settings.swift */,
 				518537BF1E380E4600600911 /* SoftU2F-Bridging-Header.h */,
 				51F090181E37E8C600F03AD3 /* Info.plist */,
-				0F2BF30128BF85960054695D /* ssl.h */,
-				0F2BF30228BF85960054695D /* ssl.c */,
 			);
 			name = SoftU2F;
 			path = SoftU2FTool;
@@ -862,7 +857,6 @@
 				51213EC61E3916EB005454E0 /* U2FHID.swift in Sources */,
 				0F42E68428BFB64800658085 /* KeychainLocal.swift in Sources */,
 				F761094D2056FE3F006BB8B0 /* Counter.swift in Sources */,
-				0F2BF30328BF85960054695D /* ssl.c in Sources */,
 				51E214601E3823E7005B2864 /* SHA256.swift in Sources */,
 				51B289E51E39903F00AD90CC /* U2FAuthenticator.swift in Sources */,
 				F7713A5F1F477BA90036A0D5 /* CLI.swift in Sources */,
